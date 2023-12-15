@@ -32,8 +32,18 @@ export const MenuLinksWrapped = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
-    .hamburger-icon, .cart-icon{
+
+    li{
+        transition-duration: 300ms;
+    }
+
+    li:hover{
+        opacity: 50%;
+    }
+
+    .hamburger-icon{
         color: white;
         font-size: 2rem;
         transition-duration: 300ms;
@@ -51,11 +61,30 @@ export const MenuLinksWrapped = styled.div`
     }
 
 
-    .cart-icon{
-        font-size: 1.3rem;
+    .close-icon-cart{
+        color: white;
+        font-size: 2.5rem;
+        transition-duration: 300ms;
         display: flex;
-        margin-left: 10px;
+
+        &:hover{
+        opacity: 50%;
+        }
     }
+
+    .close-icon-menu{
+        color: white;
+        font-size: 2.5rem;
+        transition-duration: 300ms;
+        display: flex;
+
+        &:hover{
+        opacity: 50%;
+    }
+
+    }
+
+
 `
 
 export const MenuList = styled.ul`
@@ -84,6 +113,42 @@ export const MenuList = styled.ul`
         border-bottom-right-radius: var(--rounded-out);
     }
 
-   
 
 `
+
+
+export const CartWrapper = styled.div`
+    width: 35vw;
+    height: 100vw;
+    margin-top: 89px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    display: ${props => props.$isopen ? "flex" : "none"};
+
+    @media (max-width: 991px) {
+        width: 100vw;
+        height: 100vh;
+    }
+
+`
+
+export const CartIcon = styled.span`
+display: flex;
+justify-content: center;
+align-items: center;
+width: fit-content;
+height: 90px;
+color: white;
+font-size: 1.4rem;
+transition-duration: 300ms;
+
+&:hover{
+    opacity: 0.5;
+}
+
+`
+
+

@@ -20,10 +20,6 @@ gap: 2rem;
 
     section{
         align-items: start;
-
-        .swiperSlide{
-            height: 90px;
-        }
     }
 
 }

@@ -15,7 +15,7 @@ justify-content: center;
 align-items: center;
 transition-duration: 300ms;
 
-animation-duration: 15s;
+animation-duration: 40s;
 animation-name: bg-animate;
 animation-timing-function: linear;
 animation-iteration-count: infinite;
